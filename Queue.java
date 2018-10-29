@@ -1,6 +1,6 @@
 public class Queue {
 	
-	listNode rear;
+    listNode rear;
     listNode front;
     int numberofnodes =0;
 
@@ -10,13 +10,12 @@ public class Queue {
 	{
 		listNode mynode = new listNode(newstring);
 		// First check if the queue is empty
-		if(rear == null)
-		{
+		if(rear == null){
 			rear = mynode;
 			front = mynode;
 			
-		}else
-		{
+		}
+		else{
 			// If the queue is not empty
 			mynode.next = rear;
 			rear.previous = mynode;
@@ -30,8 +29,7 @@ public class Queue {
 	public String Dequeue()
 	{
 		// This checks whether have front node or not
-		if(front == null)
-		{
+		if(front == null){
 			System.out.println("Error: the queue is empty");
 			return null;
 		}
@@ -44,8 +42,8 @@ public class Queue {
 			front = null;
 			rear = null;
 			return result_str;
-		}else
-		{
+		}
+		else{
 			listNode pre_front = front.previous;
 			front.previous = null;
 			pre_front.next = null;
@@ -58,8 +56,7 @@ public class Queue {
 	
 	//empty
 	public boolean isEmpty() {
-		if(front == null) 
-		{
+		if(front == null) {
 			return true;
 		}
 		else {
